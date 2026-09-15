@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIM by Shazaan — Lotus in Mud</title>
+<meta name="description" content="LIM by Shazaan — handmade home décor, sustainable baskets and customized Indian suits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">Handmade &nbsp;•&nbsp; Sustainable &nbsp;•&nbsp; Indian Craftsmanship &nbsp;•&nbsp; Custom Made</div>
+<header>
+  <a class="brand" href="#"><span class="lotus">✿</span><span><b>LIM</b><small>by Shazaan</small></span><i>Lotus in Mud</i></a>
+  <nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#custom">Custom Indian Suits</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
+  <div class="actions"><input id="search" placeholder="Search products…"><button aria-label="Wishlist">♡</button><button id="cartBtn" aria-label="Cart">🛒 <span id="cartCount">0</span></button></div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow">LIM — LOTUS IN MUD</p><h1>Rooted in Tradition.<br>Made by Hand.</h1>
+  <p>Thoughtfully crafted home décor and customized Indian wear, made with care and inspired by timeless Indian craftsmanship.</p>
+  <div><a class="btn dark" href="#shop">Shop Now →</a><a class="btn light" href="#custom">Customize Your Suit →</a></div></div>
+</section>
+
+<section class="categories">
+  <h2>Shop by Category</h2>
+  <div class="cat-grid">
+    <a href="#shop" data-filter="Bedsheets"><strong>Handmade Bedsheets</strong><span>Comfort in every thread →</span></a>
+    <a href="#shop" data-filter="Comforters"><strong>Comforters</strong><span>Warmth, naturally →</span></a>
+    <a href="#shop" data-filter="Wooden Baskets"><strong>Wooden Baskets</strong><span>Timeless & sturdy →</span></a>
+    <a href="#shop" data-filter="Paper Baskets"><strong>Recycled Paper Baskets</strong><span>Eco-friendly choices →</span></a>
+    <a href="#custom"><strong>Customized Indian Suits</strong><span>Your style, your way →</span></a>
+    <a href="#shop"><strong>Other Handmade Products</strong><span>Unique finds →</span></a>
+  </div>
+</section>
+
+<section id="shop" class="shop">
+  <div class="section-head"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Featured Products</h2></div><select id="filter"><option value="All">All Products</option><option>Bedsheets</option><option>Comforters</option><option>Wooden Baskets</option><option>Paper Baskets</option></select></div>
+  <div id="products" class="products"></div>
+</section>
+
+<section id="about" class="values"><div><b>✋</b><span><strong>Handmade</strong>Craftsmanship</span></div><div><b>◌</b><span><strong>Sustainable</strong>Materials</span></div><div><b>✦</b><span><strong>Custom Made</strong>Options</span></div><div><b>❀</b><span><strong>Indian-Inspired</strong>Designs</span></div><div><b>★</b><span><strong>Carefully Selected</strong>Quality</span></div></section>
+
+<section id="custom" class="custom">
+  <div class="custom-art">✂︎<br><small>YOUR DESIGN<br>YOUR CRAFT</small></div>
+  <div><p class="eyebrow">CUSTOM INDIAN SUITS</p><h2>Design Your Own<br>Indian Suit</h2><p>Tell us what you imagine. Choose your fabric, colour and style, then share measurements and a reference image.</p>
+  <div class="steps"><span>1. Select Fabric</span><span>2. Choose Colour</span><span>3. Pick Suit Style</span><span>4. Enter Measurements</span></div>
+  <button class="btn dark" onclick="openCustom()">Start Customization →</button></div>
+</section>
+</main>
+
+<footer id="contact"><div class="footer-brand"><b>LIM</b><span>Lotus in Mud</span><p>Handmade • Sustainable • Indian Craftsmanship</p></div><div><h4>Quick Links</h4><a href="#home">Home</a><a href="#shop">Shop</a><a href="#custom">Custom Indian Suits</a><a href="#about">About Us</a></div><div><h4>Customer Care</h4><a>Track Order</a><a>Shipping Policy</a><a>Returns & Refunds</a><a>FAQs</a></div><div><h4>Stay Connected</h4><p>Follow LIM on Instagram & Facebook</p><input placeholder="Enter your email"><p>© 2026 LIM by Shazaan. All rights reserved.</p></div></footer>
+
+<div id="drawer" class="drawer"><div class="drawer-box"><button class="close" onclick="closeCart()">×</button><h2>Your Cart</h2><div id="cartItems"></div><div class="total">Total <b id="total">₹0</b></div><button class="btn dark full" onclick="checkout()">Proceed to Checkout</button></div></div>
+<div id="customModal" class="drawer"><div class="drawer-box form"><button class="close" onclick="closeCustom()">×</button><p class="eyebrow">LIM CUSTOM STUDIO</p><h2>Customize Your Indian Suit</h2><label>Name<input id="cname" required></label><label>Preferred fabric<select><option>Cotton</option><option>Chanderi</option><option>Silk</option><option>Linen</option></select></label><label>Colour<input placeholder="e.g. Powder blue"></label><label>Measurements / special instructions<textarea rows="4" placeholder="Tell us your requirements…"></textarea></label><label>Reference image<input type="file" accept="image/*"></label><button class="btn dark full" onclick="submitCustom()">Send Custom Request</button></div></div>
+<script src="script.js"></script>
+</body></html>
