@@ -1,59 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LIM by Shazaan — Lotus in Mud</title>
-<meta name="description" content="LIM by Shazaan — handmade home décor, sustainable baskets and customized Indian suits.">
+<meta name="description" content="LIM by Shazaan — handmade bedsheets, comforters, woven baskets, recycled textile pieces and customized Indian suits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="topbar">Handmade &nbsp;•&nbsp; Sustainable &nbsp;•&nbsp; Indian Craftsmanship &nbsp;•&nbsp; Custom Made</div>
+<div class="topbar">HANDMADE • SUSTAINABLE • INDIAN CRAFTSMANSHIP • CUSTOM MADE</div>
+
 <header>
-  <a class="brand" href="#"><span class="lotus">✿</span><span><b>LIM</b><small>by Shazaan</small></span><i>Lotus in Mud</i></a>
-  <nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#custom">Custom Indian Suits</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
-  <div class="actions"><input id="search" placeholder="Search products…"><button aria-label="Wishlist">♡</button><button id="cartBtn" aria-label="Cart">🛒 <span id="cartCount">0</span></button></div>
+  <a class="brand" href="#home" aria-label="LIM by Shazaan home">
+    <span class="lotus">✿</span>
+    <span><b>LIM</b><small>by Shazaan</small></span>
+    <i>Lotus in Mud</i>
+  </a>
+  <nav>
+    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#custom">Custom Suits</a>
+    <a href="#story">Our Story</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="actions">
+    <button onclick="document.querySelector('#search').focus()" aria-label="Search">⌕</button>
+    <button onclick="openCart()" aria-label="Shopping cart">🛒 <span id="cartCount">0</span></button>
+  </div>
 </header>
 
 <main id="home">
 <section class="hero">
-  <div class="hero-copy"><p class="eyebrow">LIM — LOTUS IN MUD</p><h1>Rooted in Tradition.<br>Made by Hand.</h1>
-  <p>Thoughtfully crafted home décor and customized Indian wear, made with care and inspired by timeless Indian craftsmanship.</p>
-  <div><a class="btn dark" href="#shop">Shop Now →</a><a class="btn light" href="#custom">Customize Your Suit →</a></div></div>
-</section>
-
-<section class="categories">
-  <h2>Shop by Category</h2>
-  <div class="cat-grid">
-    <a href="#shop" data-filter="Bedsheets"><strong>Handmade Bedsheets</strong><span>Comfort in every thread →</span></a>
-    <a href="#shop" data-filter="Comforters"><strong>Comforters</strong><span>Warmth, naturally →</span></a>
-    <a href="#shop" data-filter="Wooden Baskets"><strong>Wooden Baskets</strong><span>Timeless & sturdy →</span></a>
-    <a href="#shop" data-filter="Paper Baskets"><strong>Recycled Paper Baskets</strong><span>Eco-friendly choices →</span></a>
-    <a href="#custom"><strong>Customized Indian Suits</strong><span>Your style, your way →</span></a>
-    <a href="#shop"><strong>Other Handmade Products</strong><span>Unique finds →</span></a>
+  <div class="hero-copy">
+    <p class="eyebrow">LIM — LOTUS IN MUD</p>
+    <h1>Rooted in tradition.<br>Made with care.</h1>
+    <p>Handmade home textiles, thoughtful baskets and Indian wear selected for people who value craft, character and individuality.</p>
+    <div class="hero-buttons">
+      <a class="btn dark" href="#shop">Shop the Collection →</a>
+      <a class="btn light" href="#custom">Customize Your Suit →</a>
+    </div>
   </div>
 </section>
 
+<section class="intro">
+  <p class="eyebrow">THE LIM COLLECTION</p>
+  <h2>Pieces with a story.</h2>
+  <p>From embroidered bedsheets to colourful patchwork and woven baskets, LIM celebrates handmade work and the beauty of useful things made thoughtfully.</p>
+</section>
+
 <section id="shop" class="shop">
-  <div class="section-head"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Featured Products</h2></div><select id="filter"><option value="All">All Products</option><option>Bedsheets</option><option>Comforters</option><option>Wooden Baskets</option><option>Paper Baskets</option></select></div>
+  <div class="section-head">
+    <div><p class="eyebrow">SHOP LIM</p><h2>Featured Collection</h2></div>
+    <div class="controls">
+      <input id="search" oninput="renderProducts()" placeholder="Search products…">
+      <select id="filter" onchange="renderProducts()">
+        <option value="All">All Products</option>
+        <option value="Bedsheets">Bedsheets</option>
+        <option value="Comforters">Comforters</option>
+        <option value="Baskets">Baskets</option>
+        <option value="Textile Rugs">Textile Rugs</option>
+        <option value="Indian Suits">Indian Suits</option>
+      </select>
+    </div>
+  </div>
   <div id="products" class="products"></div>
 </section>
 
-<section id="about" class="values"><div><b>✋</b><span><strong>Handmade</strong>Craftsmanship</span></div><div><b>◌</b><span><strong>Sustainable</strong>Materials</span></div><div><b>✦</b><span><strong>Custom Made</strong>Options</span></div><div><b>❀</b><span><strong>Indian-Inspired</strong>Designs</span></div><div><b>★</b><span><strong>Carefully Selected</strong>Quality</span></div></section>
+<section class="banner">
+  <div><p class="eyebrow">HANDMADE HOME</p><h2>Colour, texture & craft for everyday living.</h2></div>
+  <a class="btn light" href="#shop">Explore Home Collection →</a>
+</section>
 
 <section id="custom" class="custom">
-  <div class="custom-art">✂︎<br><small>YOUR DESIGN<br>YOUR CRAFT</small></div>
-  <div><p class="eyebrow">CUSTOM INDIAN SUITS</p><h2>Design Your Own<br>Indian Suit</h2><p>Tell us what you imagine. Choose your fabric, colour and style, then share measurements and a reference image.</p>
-  <div class="steps"><span>1. Select Fabric</span><span>2. Choose Colour</span><span>3. Pick Suit Style</span><span>4. Enter Measurements</span></div>
-  <button class="btn dark" onclick="openCustom()">Start Customization →</button></div>
+  <div class="custom-image">
+    <img src="assets/indian-suit-mint.jpg" alt="Indian suit inspiration">
+  </div>
+  <div class="custom-copy">
+    <p class="eyebrow">CUSTOM INDIAN SUITS</p>
+    <h2>Your measurements.<br>Your colours.<br>Your story.</h2>
+    <p>Share your preferred fabric, colour, measurements and a reference image. We'll discuss the design with you before making it.</p>
+    <div class="steps"><span>01 Fabric</span><span>02 Colour</span><span>03 Style</span><span>04 Measurements</span></div>
+    <button class="btn dark" onclick="openCustom()">Start a Custom Request →</button>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <p class="eyebrow">OUR STORY</p>
+  <h2>Why “Lotus in Mud”?</h2>
+  <p>A lotus grows through mud and still blooms with beauty. LIM takes inspiration from that idea: honouring natural materials, human hands, Indian traditions and the character that comes from making things with care.</p>
+  <div class="story-grid">
+    <div><b>01</b><h3>Handmade</h3><p>Pieces that celebrate human skill and detail.</p></div>
+    <div><b>02</b><h3>Sustainable</h3><p>Re-use, thoughtful materials and less waste where possible.</p></div>
+    <div><b>03</b><h3>Personal</h3><p>Custom options for people who want something made for them.</p></div>
+  </div>
 </section>
 </main>
 
-<footer id="contact"><div class="footer-brand"><b>LIM</b><span>Lotus in Mud</span><p>Handmade • Sustainable • Indian Craftsmanship</p></div><div><h4>Quick Links</h4><a href="#home">Home</a><a href="#shop">Shop</a><a href="#custom">Custom Indian Suits</a><a href="#about">About Us</a></div><div><h4>Customer Care</h4><a>Track Order</a><a>Shipping Policy</a><a>Returns & Refunds</a><a>FAQs</a></div><div><h4>Stay Connected</h4><p>Follow LIM on Instagram & Facebook</p><input placeholder="Enter your email"><p>© 2026 LIM by Shazaan. All rights reserved.</p></div></footer>
+<footer id="contact">
+  <div class="footer-brand"><b>LIM</b><span>Lotus in Mud</span><p>Handmade • Sustainable • Indian Craftsmanship</p></div>
+  <div><h4>Shop</h4><a href="#shop">Bedsheets</a><a href="#shop">Comforters</a><a href="#shop">Baskets</a><a href="#custom">Custom Suits</a></div>
+  <div><h4>Customer Care</h4><a>Shipping Policy</a><a>Returns & Refunds</a><a>FAQs</a><a>Track Order</a></div>
+  <div><h4>Contact</h4><p>WhatsApp: <span class="placeholder">ADD YOUR NUMBER</span></p><p>Email: <span class="placeholder">ADD YOUR EMAIL</span></p><p>Instagram: <span class="placeholder">@limbyshazaan</span></p></div>
+</footer>
 
-<div id="drawer" class="drawer"><div class="drawer-box"><button class="close" onclick="closeCart()">×</button><h2>Your Cart</h2><div id="cartItems"></div><div class="total">Total <b id="total">₹0</b></div><button class="btn dark full" onclick="checkout()">Proceed to Checkout</button></div></div>
-<div id="customModal" class="drawer"><div class="drawer-box form"><button class="close" onclick="closeCustom()">×</button><p class="eyebrow">LIM CUSTOM STUDIO</p><h2>Customize Your Indian Suit</h2><label>Name<input id="cname" required></label><label>Preferred fabric<select><option>Cotton</option><option>Chanderi</option><option>Silk</option><option>Linen</option></select></label><label>Colour<input placeholder="e.g. Powder blue"></label><label>Measurements / special instructions<textarea rows="4" placeholder="Tell us your requirements…"></textarea></label><label>Reference image<input type="file" accept="image/*"></label><button class="btn dark full" onclick="submitCustom()">Send Custom Request</button></div></div>
+<div id="drawer" class="drawer" onclick="if(event.target===this)closeCart()">
+  <div class="drawer-box">
+    <button class="close" onclick="closeCart()">×</button>
+    <h2>Your Enquiries</h2>
+    <div id="cartItems"></div>
+    <p class="drawer-note">Prices and payment options will be added once you provide your final product prices and business payment details.</p>
+    <button class="btn dark full" onclick="sendEnquiry()">Send Enquiry</button>
+  </div>
+</div>
+
+<div id="customModal" class="drawer" onclick="if(event.target===this)closeCustom()">
+  <div class="drawer-box form">
+    <button class="close" onclick="closeCustom()">×</button>
+    <p class="eyebrow">LIM CUSTOM STUDIO</p>
+    <h2>Customize Your Indian Suit</h2>
+    <label>Name<input id="cname" required></label>
+    <label>WhatsApp number<input id="cphone" required></label>
+    <label>Preferred fabric<select id="cfabric"><option>Cotton</option><option>Chanderi</option><option>Silk</option><option>Linen</option><option>Not sure yet</option></select></label>
+    <label>Colour<input id="ccolour" placeholder="e.g. sage green"></label>
+    <label>Measurements / instructions<textarea id="cdetails" rows="5" placeholder="Size, length, neck, sleeves, dupatta and other requirements…"></textarea></label>
+    <label>Reference image<input id="cref" type="file" accept="image/*"></label>
+    <button class="btn dark full" onclick="submitCustom()">Prepare WhatsApp Request →</button>
+  </div>
+</div>
+
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
