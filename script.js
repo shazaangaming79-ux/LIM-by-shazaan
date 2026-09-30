@@ -1,14 +1,14 @@
 const products = [
-  {id:1,cat:"Bedsheets",name:"Floral Circle Embroidered Bedsheet",price:"Price on request",img:"assets/bedsheet-floral-circle.jpg"},
-  {id:2,cat:"Bedsheets",name:"Red Floral Vine Bedsheet",price:"Price on request",img:"assets/bedsheet-floral-vine.jpg"},
-  {id:3,cat:"Bedsheets",name:"Hand Embroidered Floral Bedsheet",price:"Price on request",img:"assets/bedsheet-red-floral.jpg"},
-  {id:4,cat:"Bedsheets",name:"Pastel Floral Handcrafted Bedsheet",price:"Price on request",img:"assets/bedsheet-pastel-floral.jpg"},
-  {id:5,cat:"Comforters",name:"Colourful Patchwork Bedspread",price:"Price on request",img:"assets/handmade-patchwork-bedspread.jpg"},
-  {id:6,cat:"Comforters",name:"Patchwork Quilt",price:"Price on request",img:"assets/patchwork-quilt.jpg"},
-  {id:7,cat:"Textile Rugs",name:"Recycled Textile Handwoven Rug",price:"Price on request",img:"assets/recycled-fabric-rug.jpg"},
-  {id:8,cat:"Baskets",name:"Handwoven Natural Basket",price:"Price on request",img:"assets/woven-basket.jpg"},
-  {id:9,cat:"Indian Suits",name:"Mint Embroidered Indian Suit — Inspiration",price:"Custom quote",img:"assets/indian-suit-mint.jpg"},
-  {id:10,cat:"Indian Suits",name:"White Embroidered Indian Suit — Inspiration",price:"Custom quote",img:"assets/indian-suit-white.jpg"}
+  {id:1,cat:"Bedsheets",name:"Floral Circle Embroidered Bedsheet",price:"Price on request",img:"bedsheet-floral-circle.jpg"},
+  {id:2,cat:"Bedsheets",name:"Red Floral Vine Bedsheet",price:"Price on request",img:"bedsheet-floral-vine.jpg"},
+  {id:3,cat:"Bedsheets",name:"Hand Embroidered Floral Bedsheet",price:"Price on request",img:"bedsheet-red-floral.jpg"},
+  {id:4,cat:"Bedsheets",name:"Pastel Floral Handcrafted Bedsheet",price:"Price on request",img:"bedsheet-pastel-floral.jpg"},
+  {id:5,cat:"Comforters",name:"Colourful Patchwork Bedspread",price:"Price on request",img:"handmade-patchwork-bedspread.jpg"},
+  {id:6,cat:"Comforters",name:"Patchwork Quilt",price:"Price on request",img:"patchwork-quilt.jpg"},
+  {id:7,cat:"Textile Rugs",name:"Recycled Textile Handwoven Rug",price:"Price on request",img:"recycled-fabric-rug.jpg"},
+  {id:8,cat:"Baskets",name:"Handwoven Natural Basket",price:"Price on request",img:"woven-basket.jpg"},
+  {id:9,cat:"Indian Suits",name:"Mint Embroidered Indian Suit — Inspiration",price:"Custom quote",img:"indian-suit-mint.jpg"},
+  {id:10,cat:"Indian Suits",name:"White Embroidered Indian Suit — Inspiration",price:"Custom quote",img:"indian-suit-white.jpg"}
 ];
 let cart=[];
 
