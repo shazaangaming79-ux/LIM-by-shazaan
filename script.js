@@ -41,7 +41,7 @@ function sendEnquiry(){
   const names=cart.map(p=>p.name).join(", ");
   const message=`Hello LIM by Shazaan, I would like to enquire about: ${names}. Please share availability, price, delivery details and payment options.`;
   // Replace the placeholder number below with the LIM WhatsApp Business number.
-  const whatsappNumber="91XXXXXXXXXX";
+  const whatsappNumber="918600040047";
   if(whatsappNumber.includes("X")) alert("Add your WhatsApp Business number in script.js before using this button.\n\nEnquiry: "+message);
   else window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,"_blank");
 }
