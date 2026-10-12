@@ -19,3 +19,69 @@ footer{background:#1f291c;color:#f4f0e5;display:grid;grid-template-columns:2fr 1
 .drawer{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;display:none}.drawer.open{display:block}.drawer-box{position:absolute;right:0;top:0;height:100%;width:min(520px,94vw);background:var(--paper);padding:35px;overflow:auto}.close{position:absolute;right:18px;top:15px;border:0;background:none;font-size:32px}.drawer-box h2{font:600 38px "Playfair Display",serif}.cart-row{display:flex;gap:14px;border-bottom:1px solid var(--line);padding:16px 0}.cart-row img{width:80px;height:80px;object-fit:cover}.drawer-note{color:var(--muted);line-height:1.6}.full{width:100%}.form label{display:block;font-weight:600;margin:15px 0}.form input,.form select,.form textarea{display:block;width:100%;margin-top:7px;padding:12px;border:1px solid var(--line);border-radius:4px;font:inherit;background:white}
 @media(max-width:950px){header{padding:15px 4%;gap:10px}.brand{min-width:auto}.brand i,nav{display:none}.actions{margin-left:auto}.hero{min-height:600px;padding:8% 6%;background-position:65% center}.products{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.controls{width:100%}.controls input,.controls select{flex:1;min-width:0}.custom{grid-template-columns:1fr}.custom-image{height:480px}.story-grid{grid-template-columns:1fr}.banner{margin:10px 4% 50px;padding:35px;flex-direction:column;align-items:start}footer{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.topbar{font-size:10px}.brand b{font-size:31px}.hero h1{font-size:50px}.intro,.shop,.story{padding:65px 5%}.intro h2,.section-head h2,.story h2{font-size:39px}.products{grid-template-columns:1fr}.controls{flex-direction:column}.custom-copy{padding:12% 7%}.custom-copy h2{font-size:43px}.banner h2{font-size:34px}footer{grid-template-columns:1fr;padding:50px 7%}}
+/* LIM by Shazaan - Checkout */
+
+.checkout-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fdfbf5;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.checkout-box {
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #dedbd0;
+  border-radius: 12px;
+  color: #293a29;
+}
+
+.checkout-box h2 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.checkout-box label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: 600;
+}
+
+.checkout-box input,
+.checkout-box textarea {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d8d5ca;
+  border-radius: 6px;
+  font: inherit;
+  box-sizing: border-box;
+  background: #fffefa;
+}
+
+.checkout-box textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.checkout-box button {
+  margin-top: 20px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #30462d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#checkoutForm button[type="submit"] {
+  width: 100%;
+}
